@@ -8,17 +8,17 @@ class Kubeshark < Formula
   version "38.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshark/kubeshark/releases/download/38.5/kubeshark_38.5_darwin_amd64.tar.gz"
-      sha256 "4a32e51d78d5e9779db573ce5981e9d34614de142f6eb009a34e2b27d4257989"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubeshark/kubeshark/releases/download/38.5/kubeshark_38.5_darwin_arm64.tar.gz"
+      sha256 "7ed6e290eee3a9ca3776e41eee4033b34aa8e9fa3f66fa374df567e2d7efe44a"
 
       def install
         bin.install "kubeshark"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kubeshark/kubeshark/releases/download/38.5/kubeshark_38.5_darwin_arm64.tar.gz"
-      sha256 "01d294447ec32505e8f11d2e879abfb7238b8a9eb32234956e052806a87bb8b6"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshark/kubeshark/releases/download/38.5/kubeshark_38.5_darwin_amd64.tar.gz"
+      sha256 "8b68f6de3152ce8a3952e9beafa4c05e83832321ec004966f7067899b0209790"
 
       def install
         bin.install "kubeshark"
@@ -29,7 +29,7 @@ class Kubeshark < Formula
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/kubeshark/kubeshark/releases/download/38.5/kubeshark_38.5_linux_arm64.tar.gz"
-      sha256 "7c0e75822e230d11c737e6fa5bdf3ee3a2708000fe531936af6df4bb7e554808"
+      sha256 "88193e5c1c73de2daa840e0a954753a719f15fb8c23d748d626c19e339f72dd6"
 
       def install
         bin.install "kubeshark"
@@ -37,7 +37,7 @@ class Kubeshark < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/kubeshark/kubeshark/releases/download/38.5/kubeshark_38.5_linux_amd64.tar.gz"
-      sha256 "7818aee133c3ae535f5e30cd1c46c9804483b0e7f792615ccd4d2b5c7ce6aac4"
+      sha256 "386b62c1fe042acf6d04e9c7be10c87e406cafbf72ef39f1cc6245eb1332fbb1"
 
       def install
         bin.install "kubeshark"
