@@ -5,20 +5,20 @@
 class Kubeshark < Formula
   desc ""
   homepage "https://github.com/kubeshark/kubeshark"
-  version "40.4"
+  version "40.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshark/kubeshark/releases/download/40.4/kubeshark_40.4_darwin_amd64.tar.gz"
-      sha256 "87b314bd041414c08fc387e43b9f2c5786f2fa4fa898e733fed8f75368c9dd4f"
+    if Hardware::CPU.arm?
+      url "https://github.com/kubeshark/kubeshark/releases/download/40.5/kubeshark_40.5_darwin_arm64.tar.gz"
+      sha256 "45c2fb07e8f673bdadbeacc49029f927a1f814053ee1a6b7a780be2a1f6c3084"
 
       def install
         bin.install "kubeshark"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/kubeshark/kubeshark/releases/download/40.4/kubeshark_40.4_darwin_arm64.tar.gz"
-      sha256 "b233132674ab68f1127eab533a0d193d72e2a4742f697f7590396e784d649d50"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshark/kubeshark/releases/download/40.5/kubeshark_40.5_darwin_amd64.tar.gz"
+      sha256 "f502c6594e64070cb93ac9b2cb85228e5b37aa7d2ef09825c2020900bf269184"
 
       def install
         bin.install "kubeshark"
@@ -28,16 +28,16 @@ class Kubeshark < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshark/kubeshark/releases/download/40.4/kubeshark_40.4_linux_arm64.tar.gz"
-      sha256 "593f0338d42f1c9e74848728dff4fb05980af8801924651b8068e5ac58ee7d2a"
+      url "https://github.com/kubeshark/kubeshark/releases/download/40.5/kubeshark_40.5_linux_arm64.tar.gz"
+      sha256 "b3d90ca5f01c8a46d51a52e7d14da225204209b08d535f304bb999924c910c9b"
 
       def install
         bin.install "kubeshark"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshark/kubeshark/releases/download/40.4/kubeshark_40.4_linux_amd64.tar.gz"
-      sha256 "2a3acb88a2d934e719db98410ae7b92e7ca5d6c6048b088569577b14510c33f7"
+      url "https://github.com/kubeshark/kubeshark/releases/download/40.5/kubeshark_40.5_linux_amd64.tar.gz"
+      sha256 "fcf8e3a6d96d21f2f187f55b8fd40e80d5a7211ae01d1daa06ebf924ed9d0a63"
 
       def install
         bin.install "kubeshark"
