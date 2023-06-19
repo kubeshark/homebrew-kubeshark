@@ -5,20 +5,20 @@
 class Kubeshark < Formula
   desc ""
   homepage "https://github.com/kubeshark/kubeshark"
-  version "40.5"
+  version "41.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/kubeshark/kubeshark/releases/download/40.5/kubeshark_40.5_darwin_arm64.tar.gz"
-      sha256 "45c2fb07e8f673bdadbeacc49029f927a1f814053ee1a6b7a780be2a1f6c3084"
+      url "https://github.com/kubeshark/kubeshark/releases/download/41.0/kubeshark_41.0_darwin_arm64.tar.gz"
+      sha256 "2cfdfdda42277cd6609640f0b565b80d683815875515d5d8ec36321cf73c5a94"
 
       def install
         bin.install "kubeshark"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshark/kubeshark/releases/download/40.5/kubeshark_40.5_darwin_amd64.tar.gz"
-      sha256 "f502c6594e64070cb93ac9b2cb85228e5b37aa7d2ef09825c2020900bf269184"
+      url "https://github.com/kubeshark/kubeshark/releases/download/41.0/kubeshark_41.0_darwin_amd64.tar.gz"
+      sha256 "6ab485a41490fdd87f615ce98c0b12ed47a1d6c8dc5afdd55f4e8d04794ce173"
 
       def install
         bin.install "kubeshark"
@@ -28,16 +28,16 @@ class Kubeshark < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshark/kubeshark/releases/download/40.5/kubeshark_40.5_linux_arm64.tar.gz"
-      sha256 "b3d90ca5f01c8a46d51a52e7d14da225204209b08d535f304bb999924c910c9b"
+      url "https://github.com/kubeshark/kubeshark/releases/download/41.0/kubeshark_41.0_linux_arm64.tar.gz"
+      sha256 "f6d9546108dd0caeed0c6c1abb9dbb64ea1e53da91ffab10513047b3defbdd44"
 
       def install
         bin.install "kubeshark"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshark/kubeshark/releases/download/40.5/kubeshark_40.5_linux_amd64.tar.gz"
-      sha256 "fcf8e3a6d96d21f2f187f55b8fd40e80d5a7211ae01d1daa06ebf924ed9d0a63"
+      url "https://github.com/kubeshark/kubeshark/releases/download/41.0/kubeshark_41.0_linux_amd64.tar.gz"
+      sha256 "6934432d143cd4dcd65390b2b8bfdb80376da8441de203828cb0673da417685d"
 
       def install
         bin.install "kubeshark"
