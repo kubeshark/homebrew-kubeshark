@@ -5,20 +5,20 @@
 class Kubeshark < Formula
   desc ""
   homepage "https://github.com/kubeshark/kubeshark"
-  version "51.0.27"
+  version "51.0.37"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshark/kubeshark/releases/download/v51.0.27/kubeshark_51.0.27_darwin_amd64.tar.gz"
-      sha256 "7a5bbf5b1bd37abf9990eab17079d297594c82965f815999a832037fa4637dd5"
+      url "https://github.com/kubeshark/kubeshark/releases/download/v51.0.37/kubeshark_51.0.37_darwin_amd64.tar.gz"
+      sha256 "41c8732040fbae50c85452f4140b27a2a62fb128ef72bd0e5412ffb8234130c0"
 
       def install
         bin.install "kubeshark"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubeshark/kubeshark/releases/download/v51.0.27/kubeshark_51.0.27_darwin_arm64.tar.gz"
-      sha256 "a18581966916968c233bd9cc9f75659ae4481c4713cec89ba4ad5cdaa82f80f4"
+      url "https://github.com/kubeshark/kubeshark/releases/download/v51.0.37/kubeshark_51.0.37_darwin_arm64.tar.gz"
+      sha256 "84076fabdc03f0bd9d4e5c76b0bbd3a533832846319250fd169ff4c59ad95e4f"
 
       def install
         bin.install "kubeshark"
@@ -27,17 +27,17 @@ class Kubeshark < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshark/kubeshark/releases/download/v51.0.27/kubeshark_51.0.27_linux_arm64.tar.gz"
-      sha256 "379a1041d7edbbdd2c5773f6d6ae5cc1b429b1708fea161060a2383d4fe61f8c"
+    if Hardware::CPU.intel?
+      url "https://github.com/kubeshark/kubeshark/releases/download/v51.0.37/kubeshark_51.0.37_linux_amd64.tar.gz"
+      sha256 "7997befcd253bc9a0b20bbf29c9506d5b372572ed6d3f297590b682aa066b275"
 
       def install
         bin.install "kubeshark"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/kubeshark/kubeshark/releases/download/v51.0.27/kubeshark_51.0.27_linux_amd64.tar.gz"
-      sha256 "f7e812aa9ee7ae0c1e7b62de3ab4df2223ce9a1296691dc967e9819ea0f08af9"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/kubeshark/kubeshark/releases/download/v51.0.37/kubeshark_51.0.37_linux_arm64.tar.gz"
+      sha256 "ad56c8b8489b2ef00d740ee487f501525c95090f8f0c6542ee3dbc6b93f0059e"
 
       def install
         bin.install "kubeshark"
