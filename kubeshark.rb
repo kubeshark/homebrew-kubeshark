@@ -5,20 +5,20 @@
 class Kubeshark < Formula
   desc ""
   homepage "https://github.com/kubeshark/kubeshark"
-  version "52.1.0"
+  version "52.1.9"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshark/kubeshark/releases/download/v52.1.0/kubeshark_52.1.0_darwin_amd64.tar.gz"
-      sha256 "9a01634be135391f15c76d51d4da5162df1dc20c7ce755883ed9f656c6022baa"
+      url "https://github.com/kubeshark/kubeshark/releases/download/v52.1.9/kubeshark_52.1.9_darwin_amd64.tar.gz"
+      sha256 "d11ca1d03334019fd519b81dab7a170023329bb389a0da2fefd717c54c466863"
 
       def install
         bin.install "kubeshark"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubeshark/kubeshark/releases/download/v52.1.0/kubeshark_52.1.0_darwin_arm64.tar.gz"
-      sha256 "6018d83afd86e346e53f1a2c13db27f14bf7393a00855460b0365503430fc25b"
+      url "https://github.com/kubeshark/kubeshark/releases/download/v52.1.9/kubeshark_52.1.9_darwin_arm64.tar.gz"
+      sha256 "43f9f01009993a31f3acc011fa2f13eff702f76e4699fde3f06eb7c46d756b1e"
 
       def install
         bin.install "kubeshark"
@@ -28,16 +28,16 @@ class Kubeshark < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshark/kubeshark/releases/download/v52.1.0/kubeshark_52.1.0_linux_arm64.tar.gz"
-      sha256 "8f13a9b0fe12e34083c22f75c7ef13a75a59d4e0256941aab57d28ea2737c1d9"
+      url "https://github.com/kubeshark/kubeshark/releases/download/v52.1.9/kubeshark_52.1.9_linux_arm64.tar.gz"
+      sha256 "9e2d0979a285a7edd9a18228229f03a5cb8dda84e4f326d9f9ec7be7096e811a"
 
       def install
         bin.install "kubeshark"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshark/kubeshark/releases/download/v52.1.0/kubeshark_52.1.0_linux_amd64.tar.gz"
-      sha256 "1509294766aff85debe235918557050d4e63641723f2251fffda23ef9983fca9"
+      url "https://github.com/kubeshark/kubeshark/releases/download/v52.1.9/kubeshark_52.1.9_linux_amd64.tar.gz"
+      sha256 "f810b7cfaa68e020472ce63c6936b0d945e6bacd952899dbf80d6a216f41cb95"
 
       def install
         bin.install "kubeshark"
